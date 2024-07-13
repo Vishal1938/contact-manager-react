@@ -1,38 +1,106 @@
 .App {
-  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button.add {
+  background-color: #28a745; /* Green */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button.add:hover {
+  background-color: #218838;
+}
+
+button.update {
+  background-color: #007bff; /* Blue */
+}
+
+button.update:hover {
+  background-color: #0056b3;
+}
+
+button.delete {
+  background-color: #dc3545; /* Red */
+}
+
+button.delete:hover {
+  background-color: #c82333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9; /* Light grey background */
+}
+
+li .info {
+  display: flex;
+  flex-direction: column;
+}
+
+li .info .name {
+  font-weight: bold;
+  color: #333;
+}
+
+li .info .email {
+  font-weight: bold;
+  color: #555;
+}
+
+li .actions {
+  display: flex;
+  gap: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
 }
